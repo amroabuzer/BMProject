@@ -12,6 +12,8 @@
     <div class="caption">imageSrc <input type="file" id="fileInput" name="file" /></div>
   </div>
 </div>
+<p id="loadProgress">OpenCV is currently loading...</p>
+
 <script type="text/javascript">
 let imgElement = document.getElementById("imageSrc")
 let inputElement = document.getElementById("fileInput");
@@ -19,5 +21,14 @@ inputElement.addEventListener("change", (e) => {
   imgElement.src = URL.createObjectURL(e.target.files[0]);
 }, false);
 </script>
+
+<script>
+function onOpenCvReady(){
+  const text = document.getElementById("loadProgress");
+  text.innerHTML = "OpenCV has fully loaded"
+}
+</script>
+
+<script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
 </body>
 </html>
