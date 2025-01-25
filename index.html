@@ -1,0 +1,22 @@
+<!doctype html> 
+<html>
+<body>
+<form>
+	<label for="avatar">Choose a picture:</label><br/><br/>
+	<input type="file" id="avatar" accept="image/png,image/jpeg"/> <br/><br/>
+</form>
+<button type="button" onclick="submit()">SUBMIT</button> <br/><br/>
+<p id="paragraph">This is the pargraph</p></br>
+<p id="error">Error goes here</p>
+<script>
+function submit(){
+	try{
+		const file = document.getElementById("avatar").files[0];
+		document.getElementById("paragraph").innerHTML = "The image selected is " + file.name;
+	}catch(error){
+		console.log(error);
+	}
+}
+</script>
+</body>
+</html>
