@@ -9,3 +9,8 @@ Make a website to do Machine Vision filters for BIG MONEY (no watermark, no stup
 ## Current Hurdles
 * Learn OpenCV.js
 * Hosting
+* Are OpenCV libraries too big?
+* If library is too big we can consider:
+  * Changing to server-side
+  * Not using a library
+    * Will have to learn how to read file formats
